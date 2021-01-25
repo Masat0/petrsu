@@ -1,0 +1,21 @@
+version: "2"
+services:
+  client:
+    restart: always
+    build: .
+    ports:
+      - "8888:80"
+    command: npm run dev
+    volumes:
+      - ./src/assets:/app/assets
+      - ./src/components:/app/components
+      - ./src/layouts:/app/layouts
+      - ./src/locales:/app/locales
+      - ./src/middleware:/app/middleware
+      - ./src/pages:/app/pages
+      - ./src/plugins:/app/plugins
+      - ./src/static:/app/static
+      - ./src/store:/app/store
+      - ./src/nuxt.config.js:/app/nuxt.config.js
+      - ./src/package.json:/app/package.json
+      - ./src/vuetify.options.js:/app/vuetify.options.js

@@ -1,0 +1,15 @@
+@import '~vuetify/src/styles/styles.sass';
+
+// change default variables
+$material-light: map-merge($material-light, (
+  'background': #ffffff,
+  'text-color': #001655,
+  'text': (
+    'primary': #001655,
+    'secondary': #4F4F4F
+  )
+));
+
+$body-bg-color: map-get($material-light, 'background');
+$body-color: map-get($material-light, 'text-color');
+// $body-font-family: 'Hanuman' !important;
